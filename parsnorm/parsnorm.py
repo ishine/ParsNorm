@@ -56,8 +56,8 @@ class ParsNorm:
         Performs normalization on the given text based on provided options.
 
     """
-    def __init__(self, allowed_puncts='!(),-.:;? ̠،؛؟‌<>«»', remove_diacritics=True):
-        self.hazm_norm = HazmNormalizer(remove_diacritics=remove_diacritics)
+    def __init__(self, allowed_puncts='!(),-.:;? ̠،؛؟‌<>«»', remove_diacritics=True, correct_spacing=True):
+        self.hazm_norm = HazmNormalizer(correct_spacing=correct_spacing, remove_diacritics=remove_diacritics)
 
         self.parsi_norm = ParsiNormalizer()
         self.mail_url_cleaner = Mail_url_cleaner()
